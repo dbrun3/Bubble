@@ -15,11 +15,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      phone: ''
-    };
-  },
   methods: {
     login() {
       // Handle login logic here
