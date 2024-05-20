@@ -1,8 +1,6 @@
 <template>
     <div class="form-container">
         <input type="text" v-model="newMsg" placeholder="Message">
-        <input type="number" v-model="newLat" placeholder="Latitude">
-        <input type="number" v-model="newLon" placeholder="Longitude">
         <button @click="postBubble">Post</button>
     </div>
 </template>
@@ -16,28 +14,28 @@ export default {
         return {
             newItem: {},
             newMsg: '',
-            newLat: '',
-            newLon: ''
         };
+    },
+
+    props: {
+        user_lat: Number,
+        user_lng: Number
     },
     methods: {
 
         postBubble() {
-            if (this.newMsg && this.newLat && this.newLon) {
+            if (this.newMsg) {
                 this.newItem = {
                 msg_id: new Date().getTime(),
                 msg: this.newMsg,
-                loc: { lat: parseFloat(this.newLat), lon: parseFloat(this.newLon) }
-            };
-
+                loc: { lat: this.user_lat, lon: this.user_lng }
+            }
             //Post here
             this.$emit('new-item', this.newItem);
             // Clear the input fields after posting the data
             this.newMsg = '';
-            this.newLat = '';
-            this.newLon = '';
             } else {
-                alert('Please fill in all fields');
+                console.log("Won't post empty message");
             }
         } 
     }
