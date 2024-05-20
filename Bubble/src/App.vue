@@ -14,6 +14,7 @@ export default {
 <style>
 body {
 	font-family: Arial, sans-serif;
+	width: 100%
 }
 
 #app {
@@ -21,7 +22,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	padding: 0px;
 	background-color: #f5f5f5;
 }
 
@@ -44,11 +45,12 @@ label {
 }
 
 input {
-	width: 100%;
+	width: 100vw;
 	padding: 10px;
 	box-sizing: border-box;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+
 }
 
 button {
@@ -64,4 +66,6 @@ button {
 button:hover {
 	background-color: #549ef8;
 }
+
+
 </style>

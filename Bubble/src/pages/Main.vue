@@ -3,7 +3,7 @@
 		<Map id="map" v-if="mapIsLoaded" :user_lat=this.lat :user_lng=this.lng></Map>
 		<h1>Test Table</h1>
 		<BubbleTable ref = "btable"></BubbleTable>
-        <PostBubble @new-item="handleNewBubble"></PostBubble>
+        <PostBubble @new-item="handleNewBubble" :user_lat=this.lat :user_lng=this.lng></PostBubble>
 
 	</div>
 </template>
