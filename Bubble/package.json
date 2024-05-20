@@ -18,10 +18,16 @@
     "@capacitor/core": "^6.0.0",
     "@capacitor/ios": "^6.0.0",
     "@capacitor/preferences": "^6.0.0",
+    "@fawmi/vue-google-maps": "^0.9.79",
+    "@types/google.maps": "^3.55.9",
     "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "cross-env": "^7.0.3",
     "express": "^4.19.2",
+    "google-maps-api-loader": "^1.1.1",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "webpack": "^5.91.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",

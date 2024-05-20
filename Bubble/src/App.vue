@@ -1,67 +1,67 @@
 <template>
-  <div>
-    <router-view></router-view>
-  </div>
+	<div>
+		<router-view></router-view>
+	</div>
 </template>
 
 <script>
 export default {
-  name: 'App',
-  components: {},
+	name: 'App',
+	components: {},
 };
 </script>
 
 <style>
 body {
-  font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 #app {
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f5f5f5;
 }
 
 .login-container {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: center;
+	background: white;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	text-align: center;
 }
 
 .form-group {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
+	display: block;
+	margin-bottom: 5px;
 }
 
 input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 3px;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #6aadff;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
+	width: 100%;
+	padding: 10px;
+	background-color: #6aadff;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
 }
 
 button:hover {
-  background-color: #549ef8;
+	background-color: #549ef8;
 }
 </style>

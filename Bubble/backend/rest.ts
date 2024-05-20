@@ -1,4 +1,6 @@
 import express from "express";
+import bodyParser from "body-parser";
+
 
 const app = express();
 
@@ -6,7 +8,9 @@ const bubbles = [
     {msg_id: 1, msg: "Hello!!", loc: {lat:100, lon: 200}},
     {msg_id: 2, msg: "Hiiii!!", loc: {lat:300, lon: 500}},
     {msg_id: 3, msg: "YAAYY!!", loc: {lat:800, lon: 100}},
-]
+];
+
+app.use(bodyParser.json());
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -15,8 +19,14 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use((req, res, next) => {
+app.get("",(req, res, next) => {
     res.json(bubbles);
+})
+
+app.post("/post", (req, res) => {
+    bubbles.push({msg_id: req.body.msg_id, msg: req.body.msg, loc: req.body.loc})
+    console.log("Message # recieved " + req.body)
+    res.status(200).json({message:"Successfully posted"})
 })
 
 
