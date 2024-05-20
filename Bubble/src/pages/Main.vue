@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Map></Map>
+		<Map id="map" v-if="mapIsLoaded" :user_lat=this.lat :user_lng=this.lng></Map>
 		<h1>Test Table</h1>
 		<BubbleTable ref = "btable"></BubbleTable>
         <PostBubble @new-item="handleNewBubble"></PostBubble>
@@ -10,9 +10,12 @@
 
 <script>
 import axios from 'axios';
+import {Geolocation} from '@capacitor/geolocation';
 import PostBubble from '@/components/PostBubble.vue';
 import BubbleTable from '@/components/BubbleTable.vue';
 import Map from '@/components/Map.vue';
+
+
 export default {
 
 	name: "Main",
@@ -23,20 +26,26 @@ export default {
 	},
 	data() {
 		return {
+			mapIsLoaded: false,
+			lat: Number,
+			lng: Number,
 			bubbles: []
 		};
 	},
-	computed: {
-		mapConfig () {
-			return {
-				center: { lat: 0, lng: 0 }
-			}
-    	},
-  	},
 	mounted() {
+		this.getCurrentLocation();
         this.fetchData();
     },
 	methods: {
+
+		async getCurrentLocation() {
+			const coordinates = await Geolocation.getCurrentPosition();
+  			this.lat = coordinates.coords.latitude
+			this.lng = coordinates.coords.longitude
+			this.mapIsLoaded = true
+			console.log('Current position:', coordinates);
+		},
+
 		async fetchData() {
 			try {
 				const response = await axios.get(import.meta.env.VITE_SERVER_URL);
