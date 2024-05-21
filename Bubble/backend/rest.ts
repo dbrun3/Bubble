@@ -5,9 +5,9 @@ import bodyParser from "body-parser";
 const app = express();
 
 const bubbles = [
-    {msg_id: 1, msg: "Hello!!", loc: {lat:100, lon: 200}},
-    {msg_id: 2, msg: "Hiiii!!", loc: {lat:300, lon: 500}},
-    {msg_id: 3, msg: "YAAYY!!", loc: {lat:800, lon: 100}},
+    {msg_id: 1, msg: "Hello!!", loc: {lat:100, lng: 200}},
+    {msg_id: 2, msg: "Hiiii!!", loc: {lat:300, lng: 500}},
+    {msg_id: 3, msg: "YAAYY!!", loc: {lat:800, lng: 100}},
 ];
 
 app.use(bodyParser.json());

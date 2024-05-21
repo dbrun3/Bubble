@@ -28,7 +28,7 @@ export default {
                 this.newItem = {
                 msg_id: new Date().getTime(),
                 msg: this.newMsg,
-                loc: { lat: this.user_lat, lon: this.user_lng }
+                loc: { lat: this.user_lat, lng: this.user_lng }
             }
             //Post here
             this.$emit('new-item', this.newItem);

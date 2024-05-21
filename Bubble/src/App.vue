@@ -23,6 +23,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 0px;
+	position: absolute;
 	background-color: #f5f5f5;
 }
 

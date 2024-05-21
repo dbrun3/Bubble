@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Map id="map" v-if="mapIsLoaded" :user_lat=this.lat :user_lng=this.lng></Map>
+		<Map ref="bmap" @map-loaded="onMapLoaded" v-if="userPosFound" :user_lat=this.lat :user_lng=this.lng></Map>
 		<h1>Test Table</h1>
 		<BubbleTable ref = "btable"></BubbleTable>
         <PostBubble @new-item="handleNewBubble" :user_lat=this.lat :user_lng=this.lng></PostBubble>
@@ -26,7 +26,7 @@ export default {
 	},
 	data() {
 		return {
-			mapIsLoaded: false,
+			userPosFound: false,
 			lat: Number,
 			lng: Number,
 			bubbles: []
@@ -42,7 +42,7 @@ export default {
 			const coordinates = await Geolocation.getCurrentPosition();
   			this.lat = coordinates.coords.latitude
 			this.lng = coordinates.coords.longitude
-			this.mapIsLoaded = true
+			this.userPosFound = true
 			console.log('Current position:', coordinates);
 		},
 
@@ -52,6 +52,9 @@ export default {
 				if (Array.isArray(response.data)) {
 					this.bubbles = response.data;
 					this.$refs.btable.setTable(this.bubbles);
+					if(this.$refs.bmap){
+						this.$refs.bmap.inputBubbles(this.bubbles);
+					}
                     console.log(this.bubbles);
 				} else {
 					console.error('Unexpected data format:', response.data);
@@ -68,7 +71,11 @@ export default {
                 console.log(error);
             });
             this.fetchData();
-        }
+        },
+
+		onMapLoaded () {
+			this.$refs.bmap.inputBubbles(this.bubbles);
+		}
     }
 }
 </script>

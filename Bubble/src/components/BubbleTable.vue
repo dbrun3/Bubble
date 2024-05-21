@@ -10,7 +10,7 @@
 			<tbody>
 				<tr v-for="item in bubbles" :key="item.msg_id">
 					<td>{{ item.msg }}</td>
-					<td>{{ item.loc.lat }}, {{ item.loc.lon }}</td>
+					<td>{{ item.loc.lat }}, {{ item.loc.lng }}</td>
 				</tr>
 			</tbody>
 		</table>
