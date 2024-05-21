@@ -26,6 +26,7 @@
     "cross-env": "^7.0.3",
     "express": "^4.19.2",
     "google-maps-api-loader": "^1.1.1",
+    "raw-loader": "^4.0.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
     "webpack": "^5.91.0"
@@ -46,6 +47,7 @@
     "prettier": "^3.2.5",
     "typescript": "~5.4.0",
     "vite": "^5.2.8",
+    "vue-svg-loader": "^0.16.0",
     "vue-tsc": "^2.0.11"
   }
 }

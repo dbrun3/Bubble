@@ -14,7 +14,8 @@ export default {
 <style>
 body {
 	font-family: Arial, sans-serif;
-	width: 100%
+	overflow: hidden;
+	height: 100vh;
 }
 
 #app {
@@ -23,7 +24,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 0px;
-	position: absolute;
+	position: fixed;
 	background-color: #f5f5f5;
 }
 

@@ -4,10 +4,10 @@ import bodyParser from "body-parser";
 
 const app = express();
 
-const bubbles = [
-    {msg_id: 1, msg: "Hello!!", loc: {lat:100, lng: 200}},
-    {msg_id: 2, msg: "Hiiii!!", loc: {lat:300, lng: 500}},
-    {msg_id: 3, msg: "YAAYY!!", loc: {lat:800, lng: 100}},
+const bubbles = [ //41.80178932095493, -87.89100356572762
+    {msg_id: 1, msg: "Hello from the quad", loc: {lat:41.87213885234483, lng: -87.64918270844204}},
+    {msg_id: 2, msg: "Chilling at the pier today", loc: {lat:41.89151172350241, lng: -87.60588066051359}},
+    {msg_id: 3, msg: "Go lions!!! Yayy :D", loc: {lat:41.80178932095493, lng: -87.89100356572762}},
 ];
 
 app.use(bodyParser.json());
