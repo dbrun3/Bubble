@@ -1,8 +1,6 @@
 <template>
 	<div>
 		<Map ref="bmap" @map-loaded="onMapLoaded" v-if="userPosFound" :user_lat=this.lat :user_lng=this.lng></Map>
-		<h1>Test Table</h1>
-		<BubbleTable ref = "btable"></BubbleTable>
         <PostBubble @new-item="handleNewBubble" :user_lat=this.lat :user_lng=this.lng></PostBubble>
 
 	</div>
@@ -51,7 +49,6 @@ export default {
 				const response = await axios.get(import.meta.env.VITE_SERVER_URL);
 				if (Array.isArray(response.data)) {
 					this.bubbles = response.data;
-					this.$refs.btable.setTable(this.bubbles);
 					if(this.$refs.bmap){
 						this.$refs.bmap.inputBubbles(this.bubbles);
 					}
