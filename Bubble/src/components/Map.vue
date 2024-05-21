@@ -40,7 +40,6 @@
         methods: {
 
             formatMsg(msg) {
-
                 const tokens = msg.split(' ');
                 var line = ""
                 var lineNum = 0;
@@ -59,12 +58,10 @@
                 for(let i = lineNum + 1; i < 4; i++) {
                     arr.push(" ");
                 }
-
                 return arr;
             },
             // Generate new bubble
-            addBubble(msg) { 
-                
+            addBubble(msg) {     
                 const text = this.formatMsg(msg);
                 console.log(text);
 
