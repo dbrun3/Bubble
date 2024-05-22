@@ -20,6 +20,7 @@ app.use((req, res, next) => {
 })
 
 app.get("",(req, res, next) => {
+    console.log("Request attempted");
     res.json(bubbles);
 })
 
