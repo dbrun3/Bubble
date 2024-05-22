@@ -26,7 +26,18 @@ body {
 	padding: 0px;
 	position: fixed;
 	background-color: #f5f5f5;
+	bottom:0;
 }
+
+#map {
+	position: relative;
+}
+
+#post {
+	position:sticky;
+	bottom:0
+}
+
 
 .login-container {
 	background: white;
@@ -47,6 +58,7 @@ label {
 }
 
 input {
+	font-size: 16px;
 	width: 100vw;
 	padding: 10px;
 	box-sizing: border-box;
