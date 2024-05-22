@@ -30,9 +30,9 @@ export default {
 			bubbles: []
 		};
 	},
-	mounted() {
-		this.getCurrentLocation();
-        this.fetchData();
+	async mounted() {
+		await this.getCurrentLocation();
+        await this.fetchData();
     },
 	methods: {
 
@@ -61,6 +61,7 @@ export default {
 			}
 		},
 		async handleNewBubble(newBubble) {
+			await this.getCurrentLocation();
             await axios.post(import.meta.env.VITE_SERVER_URL + "/post", newBubble).then(function (response) {
                 console.log(response);
             })
