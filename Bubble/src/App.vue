@@ -59,7 +59,7 @@ label {
 
 input {
 	font-size: 16px;
-	width: 100vw;
+	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
 	border: 1px solid #ccc;
