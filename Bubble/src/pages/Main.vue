@@ -1,8 +1,13 @@
 <template>
-	<div>
-		<Map ref="bmap" @map-loaded="onMapLoaded" v-if="userPosFound" :user_lat=this.lat :user_lng=this.lng></Map>
-        <PostBubble @new-item="handleNewBubble" :user_lat=this.lat :user_lng=this.lng></PostBubble>
+	<div id = "parent">
 
+		<div id = "map">
+			<Map ref="bmap" @map-loaded="onMapLoaded" v-if="userPosFound" :user_lat=this.lat :user_lng=this.lng></Map>
+		</div>        
+		
+		<div id = "post">
+			<PostBubble @new-item="handleNewBubble" :user_lat=this.lat :user_lng=this.lng></PostBubble>
+		</div>
 	</div>
 </template>
 
