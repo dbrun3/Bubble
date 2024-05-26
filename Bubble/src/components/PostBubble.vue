@@ -1,7 +1,8 @@
 <template>
     <div class="form-container">
-        <input type="text" v-model="newMsg" placeholder="Message">
-        <button @click="postBubble">Post</button>
+        <form @submit.prevent="postBubble">
+            <input type="text" v-model="newMsg" placeholder="Message">
+        </form>
     </div>
 </template>
 
@@ -28,6 +29,7 @@ export default {
                 this.newItem = {
                 msg_id: new Date().getTime(),
                 msg: this.newMsg,
+                style: 0,
                 loc: { lat: this.user_lat, lng: this.user_lng }
             }
             //Post here

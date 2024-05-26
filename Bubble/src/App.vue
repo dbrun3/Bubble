@@ -34,7 +34,8 @@ body {
 }
 
 #post {
-	position:sticky;
+	position: absolute;
+	width: 100%;
 	bottom:0
 }
 
@@ -64,6 +65,7 @@ input {
 	box-sizing: border-box;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+	height: 50px;
 
 }
 
