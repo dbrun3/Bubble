@@ -10,6 +10,18 @@ A "MapChat" style app that provides location-based, user-generated speech bubble
       <p>
         To try it yourself, clone the repository and navigate to the inner Bubble directory <code>cd Bubble</code>
       </p>      
+      <p>
+        Then, install all necessary node libraries <code>npm install</code>
+      </p>
+      <p>
+        Create a .env file and set the necessary environment variables <code>VITE_SERVER_URL=YOUR_IP_ADDRESS:3000 VITE_API_KEY=YOUR-GOOGLE-API-KEY</code>
+      </p>
+      <p>
+        Start the server using <code>npx tsx backend/server.ts</code>
+      </p>
+      <p>
+        And finally run the application with vite <code>npm run dev</code> !
+      </p>
     </td>
   </tr>
 </table>
