@@ -3,10 +3,12 @@ A "MapChat" style app that provides location-based, user-generated speech bubble
 
 <table>
   <tr>
-    <img src="https://github.com/dbrun3/Bubble/assets/142943600/ec153a17-e383-4366-9c58-b75873dfb26f" width="200">    
-  </tr>
-  <tr>
-    testing
+    <td>
+      <img src="https://github.com/dbrun3/Bubble/assets/142943600/ec153a17-e383-4366-9c58-b75873dfb26f" width="200">    
+    </td>
+    <td>
+      <p>testing</p>      
+    </td>
   </tr>
 </table>
 
