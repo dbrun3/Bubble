@@ -38,6 +38,10 @@ export default {
 	async mounted() {
 		await this.getCurrentLocation();
         await this.fetchData();
+		window.setInterval(() => {
+    		this.getCurrentLocation();
+        	this.fetchData();
+  		}, 30000)
     },
 	methods: {
 
