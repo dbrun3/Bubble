@@ -8,7 +8,7 @@ A "MapChat" style app that provides location-based, user-generated speech bubble
     </td>
     <td>
       <p>
-        To try it yourself, clone the repository and navigate to the inner Bubble directory ```cd Bubble```
+        To try it yourself, clone the repository and navigate to the inner Bubble directory <code>cd Bubble</code>
       </p>      
     </td>
   </tr>
